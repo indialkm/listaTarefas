@@ -1,0 +1,923 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Rubik+Doodle+Shadow&family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,500;1,100;1,500&family=Roboto:ital,wght@1,500&family=Rubik+Doodle+Shadow&family=Ultra&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --rosa: #f29c9c;
+  --carmim: #ed8080;
+  --vermelho: #d84141;
+  --altura-agua: 0%;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rosa);
+  align-items: center;
+}
+
+header {
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+  
+}
+h1 {
+  font-family: "Grandstander", sans-serif;
+  font-size: bold;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: "Grandstander", sans-serif;
+  font-size: bold;
+  font-size: 2rem;
+}
+
+main { 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.ajuste{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lista {
+  font-family: "Roboto", sans-serif;
+  margin-left: 20px;
+  padding: 20px;
+  width: 80%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ed8080;
+  overflow: scroll;
+  overflow-x: auto;
+  border-radius: 20px;
+}
+
+#fundoLista {
+  width: 100%;
+}
+
+.input {
+  text-align: center;
+  height: 6vh;
+  width: 100%;
+  border-radius: 2vh;
+  border: 2px solid black;
+}
+
+.btnTarefa {
+  margin-top: 5px;
+  width: 7vh;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid black;
+}
+
+.Apagar {
+  width: 45px;
+  padding: 10px;
+  height: 45px;
+  margin-left: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid black;
+}
+.tarefas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.caixinha {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+  border-radius: 60px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.caixinha:checked {
+  background-color: var(--vermelho);
+}
+
+.paragrafoTxt {
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+.tarefas li {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pomodoro {
+  display: flex;
+  width: 100%;
+  margin-top: 20%;
+  margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80vh;
+  background-color: #ed8080;
+  border-radius: 20px;
+}
+
+.relogio {
+  margin-top: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.tempo{
+  margin-top: 60px;
+  padding: 30px;
+}
+
+.relogio button {
+  margin-top: 20px;
+  width: 8vh;
+  height: 8vh;
+  font-size: 1rem;
+}
+
+.relogio h3 {
+  font-size: 1rem;
+}
+
+.relogio h2 {
+  margin-top: 30px;
+}
+.relogioPomodoro {
+  list-style-type: none;
+  margin-top: 20px;
+  height: 30vh;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 0;
+}
+
+.pomodoro .botoes button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  border: 3px solid black;
+  background-color: var(--vermelho);
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/*************************************************Aguinha*******************************************************************/
+.garrafinha {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagemGarrafa {
+  width: 100%;
+  height: 62vh;
+  background-image: url("../image/garrafa.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.imagemGarrafa::before {
+  position: absolute;
+  content: "";
+  height: var(--altura-agua);
+  width: 89%;
+  bottom: 40px;
+  background-color: #d84141;
+  z-index: -1;
+  border-radius: 20px 20px 50px 50px;
+}
+
+
+#contadorAgua {
+  align-self: center;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.btnControle,
+.btnControleLimpar {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: 3px solid black;
+  background-color: var(--vermelho);
+  color: #ffffff;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.btn{
+  display: flex;
+  flex-direction: column;
+}
+
+.tempo{
+  font-family: "Roboto", sans-serif;
+}
+
+.tempo, .segundos{
+  font-weight: 700;
+}
+
+.zerarPomodoros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  padding:20px 10px;
+  font-size: 1rem;
+  border: 3px solid black;
+  background-color: var(--vermelho);
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+   
+}
+
+.pAguinha{
+  margin-top: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+
+
+/********************************Desktop****************************/
+@media screen and (min-width: 1700px) {
+  body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .ajuste02 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ajuste {
+    width: 40%;
+    margin-left: 70px;
+  }
+
+  /*************************************************Lista*******************************************************************/
+
+  .lista {
+    width: 110%;
+    height: 60vh;
+    margin: 0;
+    padding: 20px;
+    border: 3px solid black;
+    margin-bottom: 50px;
+  }
+
+  /*************************************************Pomodoro*******************************************************************/
+
+  h2 {
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+
+  .pomodoro {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+    
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  .box {
+    padding: 20px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    width: 110%;
+    height:auto;
+    background-color: #ed8080;
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+
+  .relogio {
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: row;
+    font-weight: 900;
+    font-size: 5rem;
+  }
+
+  .tempo {
+    margin-top: 0;
+    padding: 0;
+    margin-left: 100px;
+    height: 10vh;
+  }
+
+  .relogioPomodoro {
+    list-style-type: none;
+    height: 20vh;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .botoes {
+    margin-left: 30px;
+  }
+  .pomodoro .botoes button {
+    font-family: "Roboto", sans-serif;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 3px solid black;
+    background-color: var(--vermelho);
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .zerarPomodoros {
+    margin-top: 20px;
+    width: 90%;
+    height: 4vh;
+  }
+
+  /*************************************************Aguinha*******************************************************************/
+
+  .garrafinha {
+    display: flex;
+    width: 40%;
+    height: 120vh;
+    box-sizing: border-box;
+    justify-content: start;
+    
+  }
+
+  .imagemGarrafa {
+    width: 130%;
+    height: 70vh;
+    background-image: url("../image/garrafa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  .imagemGarrafa::before {
+    position: absolute;
+    content: "";
+    height: var(--altura-agua);
+    width: 260px;
+    bottom: 15px;
+    background-color: #d84141;
+    z-index: -1;
+    border-radius: 40px 40px 30px 30px;
+  }
+}
+
+
+
+
+
+
+/********************************Medio****************************/
+
+@media screen and (min-width: 1040px) and (max-width: 1700px) {
+
+  body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .ajuste02 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ajuste {
+    width: 40%;
+    margin-left: 70px;
+  }
+
+  /*************************************************Lista*******************************************************************/
+
+  .lista {
+    width: 110%;
+    height: 60vh;
+    margin: 0;
+    padding: 20px;
+    border: 3px solid black;
+    margin-bottom: 50px;
+  }
+
+  /*************************************************Pomodoro*******************************************************************/
+
+  h2 {
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+
+  .pomodoro {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  .box {
+    padding: 20px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 110%;
+    height:80vh;
+    background-color: #ed8080;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
+  .relogio {
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    font-size: 5rem;
+  }
+
+  .tempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 0;
+    height: 50vh;
+  }
+
+  .relogioPomodoro {
+    list-style-type: none;
+    height: 100%;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .pomodoro .botoes button {
+    font-family: "Roboto", sans-serif;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 3px solid black;
+    background-color: var(--vermelho);
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .zerarPomodoros {
+    margin-top: 20px;
+    width: 90%;
+    height: 4vh;
+  }
+
+  /*************************************************Aguinha*******************************************************************/
+
+  .garrafinha {
+    display: flex;
+    width: 40%;
+    height: 120vh;
+    box-sizing: border-box;
+    justify-content: start;
+    
+  }
+
+  .imagemGarrafa {
+    width: 130%;
+    height: 70vh;
+    background-image: url("../image/garrafa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  .imagemGarrafa::before {
+    position: absolute;
+    content: "";
+    height: var(--altura-agua);
+    width: 260px;
+    bottom: 15px;
+    background-color: #d84141;
+    z-index: -1;
+    border-radius: 40px 40px 30px 30px;
+  }
+
+}
+
+
+
+/********************************bem pequeno****************************/
+
+
+@media screen and (min-height: 516px) and (max-height: 915px) {
+
+
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--rosa);
+    align-items: center;
+  }
+  
+  header {
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  h1 {
+    font-family: "Grandstander", sans-serif;
+    font-size: bold;
+    font-size: 2rem;
+    padding: 10%;
+  }
+  
+  main h1 {
+    padding: 0;
+    margin: 0;
+    font-family: "Grandstander", sans-serif;
+    font-size: bold;
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+  
+  main { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .ajuste{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lista {
+    font-family: "Roboto", sans-serif;
+    margin-left: 20px;
+    padding: 20px;
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ed8080;
+    overflow: scroll;
+    overflow-x: auto;
+    border-radius: 20px;
+  }
+  
+  #fundoLista {
+    width: 100%;
+  }
+  
+  .input {
+    text-align: center;
+    height: 6vh;
+    width: 100%;
+    border-radius: 2vh;
+    border: 2px solid black;
+  }
+  
+  .btnTarefa {
+    margin-top: 5px;
+    width: 7vh;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid black;
+  }
+  
+  .Apagar {
+    width: 45px;
+    padding: 10px;
+    height: 45px;
+    margin-left: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid black;
+  }
+  .tarefas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .caixinha {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+    border-radius: 60px;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  
+  .caixinha:checked {
+    background-color: var(--vermelho);
+  }
+  
+  .paragrafoTxt {
+    max-width: 60%;
+    word-wrap: break-word;
+  }
+  
+  .tarefas li {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pomodoro {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin-top: 20%;
+    margin-bottom: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    background-color: #ed8080;
+    border-radius: 20px;
+  }
+  
+  .relogio {
+    margin-top: 20%;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    font-size: 4rem;
+  }
+  
+  .tempo{
+    margin-top: 30px;
+    padding: 30px;
+  }
+  
+  .relogio button {
+    margin-top: 20px;
+    width: 8vh;
+    height: 8vh;
+    font-size: 1rem;
+  }
+  
+  .relogio h3 {
+    font-size: 1rem;
+  }
+  
+  .relogio h2 {
+    margin-top: 30px;
+  }
+  .relogioPomodoro {
+    list-style-type: none;
+    margin-top: 20px;
+    height: 10vh;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .pomodoro .botoes button {
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: 3px solid black;
+    background-color: var(--vermelho);
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  /*************************************************Aguinha*******************************************************************/
+  .garrafinha {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  
+  .imagemGarrafa {
+    width: 100%;
+    height: 62vh;
+    background-image: url("../image/garrafa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+  
+  .imagemGarrafa::before {
+    position: absolute;
+    content: "";
+    height: var(--altura-agua);
+    width: 89%;
+    bottom: 30px;
+    background-color: #d84141;
+    z-index: -1;
+    border-radius: 20px 20px 50px 50px;
+  }
+  
+  
+  #contadorAgua {
+    align-self: center;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    width: 40%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+  }
+  
+  .btnControle,
+  .btnControleLimpar {
+    font-family: "Roboto", sans-serif;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border: 3px solid black;
+    background-color: var(--vermelho);
+    color: #ffffff;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .btn{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tempo{
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .tempo, .segundos{
+    font-weight: 700;
+  }
+  
+  .zerarPomodoros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    padding:20px 10px;
+    font-size: 1rem;
+    border: 3px solid black;
+    background-color: var(--vermelho);
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+     
+  }
+  
+  .pAguinha{
+    margin-top: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+  }
+}  

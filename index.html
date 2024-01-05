@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Lista To do</title>
+  </head>
+
+  <body>
+    <header>
+        <h1>Organização para o dia :)</h1>
+    </header>
+    <main>
+      <div class="ajuste02">
+        <div class="ajuste">
+          <h1>Minha Lista to Do</h1>
+          <section class="lista">
+            <div id="fundoLista">
+              <div class="inputTarefas">
+                <input type="text" class="input" />
+                <button class="btnTarefa">
+                  <i class="material-symbols-outlined">add</i>
+                </button>
+              </div>
+              <ul class="tarefas"></ul>
+            </div>
+          </section>
+
+          <section class="pomodoro">
+            <h2>Método Pomodoro</h2>
+            <div class="box">
+              <div class="relogio">
+                <div class="segundos">00:00:00</div>
+                <div class="botoes">
+                  <button class="iniciar">Iniciar</button>
+                  <button class="pausar">Pausar</button>
+                  <button class="zerar">Zerar</button>
+                </div>
+              </div>
+
+              <div class="tempo">
+                <h2>Tempos</h2>
+                <h3>Faça 3 tempos e depois descanse 15 minutos</h3>
+                <ul class="relogioPomodoro"></ul>
+                <button class="zerarPomodoros">Limpar</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="garrafinha">
+          <h2>Tomar Aguinha</h2>
+         
+          <div class="controle">
+            <div class="imagemGarrafa"></div>
+            
+            <div class="btn">
+            <input type="number" id="contadorAgua" min="200" />
+            <button class="btnControle">Tomei</button>
+            <button class="btnControleLimpar">Limpar</button>
+            </div>
+         
+          </div>
+         
+          <div>
+            <p class="pAguinha">Minímo de 200ml, sem discursões. Vai beber agua!</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
